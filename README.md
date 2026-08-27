@@ -1,6 +1,6 @@
 # Education Motion Detail Concept
 
-지원용 모션 상세페이지 프로토타입입니다.
+교육 관련 모션 상세페이지 프로토타입입니다.
 
 ## Stack
 
