@@ -1,0 +1,2014 @@
+.page {
+  overflow: clip;
+}
+
+/* ========================
+   COMMON
+======================== */
+
+.eyebrow,
+.sectionNumber {
+  margin: 0 0 28px;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+}
+
+/* ========================
+   HERO
+======================== */
+
+.hero {
+  position: relative;
+
+  min-height: 100svh;
+
+  display: grid;
+  place-items: center;
+
+  padding: 96px 24px 56px;
+
+  overflow: hidden;
+
+  color: white;
+
+  background:
+    radial-gradient(
+      circle at 50% 40%,
+      rgba(216, 255, 103, 0.42),
+      transparent 32%
+    ),
+    #11130f;
+}
+
+.heroGlow {
+  position: absolute;
+
+  width: 44vw;
+  aspect-ratio: 1;
+
+  border-radius: 50%;
+
+  background:
+    rgba(216, 255, 103, 0.16);
+
+  filter: blur(90px);
+
+  animation:
+    breathe 5s ease-in-out
+    infinite alternate;
+}
+
+.heroInner {
+  position: relative;
+
+  width: min(1180px, 100%);
+
+  text-align: center;
+}
+
+.hero h1 {
+  margin: 0;
+
+  font-size:
+    clamp(
+      48px,
+      7vw,
+      104px
+    );
+
+  line-height: 0.98;
+
+  letter-spacing: -0.06em;
+
+  animation:
+    revealUp 0.9s 0.1s both;
+}
+
+.heroLead {
+  margin: 32px 0 44px;
+
+  font-size:
+    clamp(
+      18px,
+      2vw,
+      25px
+    );
+
+  line-height: 1.55;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.68
+    );
+
+  animation:
+    revealUp 0.9s 0.28s
+    both;
+}
+
+.heroPhone {
+  position: relative;
+
+  width: max-content;
+
+  margin: 0 auto;
+
+  animation:
+    revealUp 1s 0.42s
+    both;
+}
+
+.notification {
+  position: absolute;
+
+  top: 16%;
+  left: calc(100% - 22px);
+
+  width: 260px;
+
+  padding: 16px 18px;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.28
+    );
+
+  border-radius: 18px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.14
+    );
+
+  backdrop-filter: blur(18px);
+
+  text-align: left;
+
+  box-shadow:
+    0 20px 60px
+    rgba(0, 0, 0, 0.28);
+
+  animation:
+    notificationIn
+    0.65s
+    1.1s
+    both;
+}
+
+.notification span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  font-size: 10px;
+
+  letter-spacing: 0.12em;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.62
+    );
+}
+
+.notification strong {
+  font-size: 14px;
+}
+
+.scrollHint {
+  position: absolute;
+
+  bottom: 24px;
+
+  font-size: 10px;
+
+  letter-spacing: 0.16em;
+
+  opacity: 0.45;
+}
+
+/* ========================
+   PHONE
+======================== */
+
+.phone {
+  width: 290px;
+  height: 590px;
+
+  overflow: hidden;
+
+  border: 8px solid #252722;
+
+  border-radius: 42px;
+
+  background: #eceee7;
+
+  color: #191c18;
+
+  box-shadow:
+    0 35px 90px
+      rgba(0, 0, 0, 0.3),
+    inset 0 0 0 1px
+      rgba(
+        255,
+        255,
+        255,
+        0.4
+      );
+}
+
+.phoneTop {
+  height: 42px;
+
+  padding: 12px 20px 0;
+
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  align-items: flex-start;
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.dynamicIsland {
+  width: 76px;
+  height: 20px;
+
+  margin-top: -4px;
+
+  border-radius: 999px;
+
+  background: #11130f;
+}
+
+.chatHeader {
+  height: 66px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 0 18px;
+
+  border-bottom:
+    1px solid
+    rgba(0, 0, 0, 0.08);
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.72
+    );
+}
+
+.logoBubble {
+  width: 34px;
+  height: 34px;
+
+  display: grid;
+  place-items: center;
+
+  flex: 0 0 auto;
+
+  border-radius: 50%;
+
+  background: #151713;
+
+  color: var(--lime);
+
+  font-weight: 900;
+}
+
+.chatHeader strong,
+.chatHeader span {
+  display: block;
+}
+
+.chatHeader strong {
+  font-size: 12px;
+}
+
+.chatHeader span {
+  margin-top: 2px;
+
+  font-size: 10px;
+
+  color: #80857c;
+}
+
+.chatBody {
+  position: relative;
+
+  min-height: 440px;
+
+  padding: 24px 16px;
+}
+
+.experiencePhoneBody {
+  position: relative;
+
+  min-height: 440px;
+
+  padding: 24px 16px;
+
+  overflow: hidden;
+}
+
+.dateChip {
+  position: relative;
+
+  z-index: 20;
+
+  width: max-content;
+
+  margin: 0 auto 20px;
+
+  padding: 5px 9px;
+
+  border-radius: 999px;
+
+  background:
+    rgba(0, 0, 0, 0.08);
+
+  font-size: 9px;
+
+  color: #6f746b;
+}
+
+.phoneExperienceLayer {
+  position: absolute;
+
+  top: 68px;
+  left: 16px;
+  right: 16px;
+
+  transform-origin:
+    center top;
+
+  will-change:
+    opacity,
+    transform;
+}
+
+.messageBubble {
+  width: 86%;
+
+  padding: 16px;
+
+  border-radius:
+    4px 18px 18px 18px;
+
+  background: white;
+
+  box-shadow:
+    0 8px 30px
+    rgba(0, 0, 0, 0.06);
+}
+
+.messageLabel {
+  display: inline-block;
+
+  margin-bottom: 8px;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 0.05em;
+}
+
+.messageBubble p {
+  margin: 0;
+
+  white-space: pre-line;
+
+  font-size: 13px;
+
+  line-height: 1.65;
+}
+
+.miniCard {
+  margin-top: 16px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 12px;
+
+  border-radius: 16px;
+
+  background: var(--lime);
+}
+
+.miniVisual {
+  width: 56px;
+
+  aspect-ratio: 1;
+
+  display: grid;
+
+  place-content: center;
+
+  flex: 0 0 auto;
+
+  border-radius: 14px;
+
+  background: #151713;
+
+  color: white;
+
+  text-align: center;
+}
+
+.miniVisual span {
+  font-size: 21px;
+
+  font-weight: 900;
+
+  line-height: 1;
+}
+
+.miniVisual small {
+  margin-top: 3px;
+
+  font-size: 7px;
+
+  letter-spacing: 0.1em;
+}
+
+.miniCard strong {
+  display: block;
+
+  font-size: 11px;
+}
+
+.miniCard p {
+  margin: 5px 0 0;
+
+  font-size: 9px;
+
+  line-height: 1.5;
+}
+
+.phoneHomeBar {
+  width: 90px;
+  height: 4px;
+
+  margin: 8px auto 0;
+
+  border-radius: 99px;
+
+  background: #1a1c18;
+}
+
+/* ========================
+   PROBLEM
+======================== */
+
+.problem {
+  padding: 150px 24px;
+}
+
+.problemInner {
+  width: min(1180px, 100%);
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.problem h2 {
+  margin: 40px 0 10px;
+
+  font-size:
+    clamp(
+      70px,
+      11vw,
+      170px
+    );
+
+  line-height: 0.9;
+
+  letter-spacing: -0.08em;
+}
+
+.problemCopy {
+  margin: 0;
+
+  font-size:
+    clamp(
+      26px,
+      4vw,
+      54px
+    );
+
+  line-height: 1.15;
+
+  letter-spacing: -0.04em;
+}
+
+.problemCards {
+  position: relative;
+
+  height: 400px;
+
+  margin: 70px 0 20px;
+}
+
+.problemCard {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width:
+    min(
+      260px,
+      70vw
+    );
+
+  padding: 28px 24px;
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius: 20px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.82
+    );
+
+  box-shadow:
+    0 18px 55px
+    rgba(
+      32,
+      39,
+      27,
+      0.08
+    );
+
+  font-weight: 800;
+
+  transform:
+    translate(
+      -50%,
+      -50%
+    )
+    translate(
+      calc(
+        (
+          var(--i) - 2
+        ) * 56px
+      ),
+      calc(
+        (
+          var(--i) - 2
+        ) * 20px
+      )
+    )
+    rotate(
+      calc(
+        (
+          var(--i) - 2
+        ) * 4deg
+      )
+    );
+}
+
+.problemAnswer {
+  margin-top: 80px;
+
+  display: grid;
+
+  gap: 7px;
+
+  font-size:
+    clamp(
+      22px,
+      3.4vw,
+      46px
+    );
+
+  line-height: 1.2;
+}
+
+.problemAnswer strong {
+  text-decoration: underline;
+
+  text-decoration-thickness: 5px;
+
+  text-decoration-color:
+    var(--lime);
+
+  text-underline-offset: 7px;
+}
+
+.tenMinuteStamp {
+  margin-top: 160px;
+
+  display: grid;
+
+  justify-items: center;
+}
+
+.tenMinuteStamp strong {
+  font-size:
+    clamp(
+      150px,
+      28vw,
+      420px
+    );
+
+  line-height: 0.75;
+
+  letter-spacing: -0.08em;
+}
+
+.tenMinuteStamp span {
+  margin-top: 28px;
+
+  font-size:
+    clamp(
+      18px,
+      2vw,
+      28px
+    );
+
+  font-weight: 900;
+
+  letter-spacing: 0.28em;
+}
+
+.centerCopy {
+  margin-top: 32px;
+
+  font-size: 18px;
+
+  color: var(--muted);
+}
+
+/* ========================
+   EXPERIENCE
+======================== */
+
+.experience {
+  position: relative;
+
+  height: 500vh;
+
+  background: #151713;
+
+  color: white;
+}
+
+.experienceSticky {
+  position: sticky;
+
+  top: 0;
+
+  height: 100svh;
+
+  display: grid;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  padding: 60px 24px;
+}
+
+.experienceGrid {
+  width: min(1180px, 100%);
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(320px, 0.85fr)
+    minmax(0, 1.15fr);
+
+  gap:
+    clamp(
+      70px,
+      9vw,
+      150px
+    );
+
+  align-items: center;
+}
+
+.phoneColumn {
+  width: max-content;
+
+  margin: 0 auto;
+}
+
+.progressTrack {
+  width: 290px;
+
+  height: 3px;
+
+  margin-top: 22px;
+
+  overflow: hidden;
+
+  border-radius: 99px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.12
+    );
+}
+
+.progressTrack span {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  background: var(--lime);
+
+  transform-origin:
+    left center;
+
+  will-change: transform;
+}
+
+.experienceProgress {
+  margin-top: 14px;
+
+  display: grid;
+
+  grid-template-columns:
+    auto 1fr auto;
+
+  gap: 12px;
+
+  align-items: center;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.45
+    );
+}
+
+.experienceProgress i {
+  display: block;
+
+  height: 1px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.15
+    );
+}
+
+.stepColumn {
+  position: relative;
+
+  min-height: 530px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.stepColumn
+  .sectionNumber {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  margin: 0;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.45
+    );
+}
+
+.experienceTextStage {
+  position: relative;
+
+  height: 320px;
+}
+
+.experienceTextLayer {
+  position: absolute;
+
+  top: 50%;
+  left: 0;
+
+  width: 100%;
+
+  transform-origin:
+    left center;
+
+  will-change:
+    opacity,
+    transform;
+}
+
+.experienceTextLayer
+  > span {
+  display: block;
+
+  margin-bottom: 18px;
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+  letter-spacing: 0.14em;
+
+  color: var(--lime);
+}
+
+.experienceTextLayer h2 {
+  margin: 0 0 22px;
+
+  font-size:
+    clamp(
+      52px,
+      6vw,
+      92px
+    );
+
+  line-height: 0.95;
+
+  letter-spacing: -0.065em;
+}
+
+.experienceTextLayer p {
+  max-width: 520px;
+
+  margin: 0;
+
+  font-size: 17px;
+
+  line-height: 1.75;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.58
+    );
+}
+
+.stepNav {
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  border-top:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.12
+    );
+}
+
+.stepNav > div {
+  position: relative;
+
+  padding: 18px 10px 0 0;
+
+  opacity: 0.28;
+
+  transition:
+    opacity 0.25s ease;
+}
+
+.stepNav > div::before {
+  content: "";
+
+  position: absolute;
+
+  top: -1px;
+  left: 0;
+
+  width: 0;
+  height: 2px;
+
+  background: var(--lime);
+
+  transition:
+    width 0.4s ease;
+}
+
+.stepNav
+  > div.stepNavActive {
+  opacity: 1;
+}
+
+.stepNav
+  > div.stepNavActive::before {
+  width: 100%;
+}
+
+.stepNav span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.45
+    );
+}
+
+.stepNav p {
+  margin: 0;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+}
+
+/* ========================
+   10 MINUTES
+======================== */
+
+.tenMinutes {
+  min-height: 100svh;
+
+  padding: 130px 24px;
+
+  display: grid;
+
+  place-items: center;
+
+  align-content: center;
+
+  text-align: center;
+}
+
+.tenMinutes
+  .sectionNumber {
+  margin-bottom: 60px;
+}
+
+.timer {
+  font-size:
+    clamp(
+      110px,
+      20vw,
+      290px
+    );
+
+  font-weight: 900;
+
+  line-height: 0.8;
+
+  letter-spacing: -0.08em;
+}
+
+.tenMinutes h2 {
+  margin: 48px 0;
+
+  font-size:
+    clamp(
+      34px,
+      5vw,
+      68px
+    );
+
+  letter-spacing: -0.05em;
+}
+
+.wordStack {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  gap: 10px;
+}
+
+.wordStack span {
+  padding: 12px 18px;
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius: 999px;
+
+  background: white;
+
+  font-weight: 800;
+}
+
+/* ========================
+   SYSTEM
+======================== */
+
+.system {
+  padding: 140px 24px;
+
+  background: white;
+}
+
+.systemHeader,
+.systemGrid {
+  width: min(1180px, 100%);
+
+  margin-inline: auto;
+}
+
+.systemHeader {
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  gap: 40px;
+
+  align-items: end;
+}
+
+.systemHeader h2 {
+  margin: 0;
+
+  max-width: 760px;
+
+  font-size:
+    clamp(
+      48px,
+      6vw,
+      84px
+    );
+
+  line-height: 1;
+
+  letter-spacing: -0.06em;
+}
+
+.systemGrid {
+  margin-top: 70px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  border-top:
+    1px solid
+    var(--line);
+
+  border-left:
+    1px solid
+    var(--line);
+}
+
+.systemCard {
+  min-height: 350px;
+
+  padding: 28px;
+
+  border-right:
+    1px solid
+    var(--line);
+
+  border-bottom:
+    1px solid
+    var(--line);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.systemCard:hover {
+  transform:
+    translateY(-12px);
+
+  background: #f4ffd9;
+}
+
+.systemCard > span {
+  font-size: 12px;
+
+  font-weight: 900;
+}
+
+.systemCard h3 {
+  margin:
+    160px 0 8px;
+
+  font-size: 30px;
+
+  letter-spacing: -0.04em;
+}
+
+.systemCard p {
+  margin: 0;
+
+  color: var(--muted);
+}
+
+/* ========================
+   ROUTINE
+======================== */
+
+.routine {
+  width:
+    min(
+      1180px,
+      calc(
+        100% - 48px
+      )
+    );
+
+  margin: 0 auto;
+
+  padding: 150px 0;
+
+  display: grid;
+
+  grid-template-columns:
+    0.8fr 1.2fr;
+
+  gap: 80px;
+
+  align-items: center;
+}
+
+.routineCopy h2 {
+  margin: 0 0 24px;
+
+  font-size:
+    clamp(
+      46px,
+      6vw,
+      78px
+    );
+
+  line-height: 1;
+
+  letter-spacing: -0.06em;
+}
+
+.routineCopy
+  > p:last-child {
+  font-size: 17px;
+
+  line-height: 1.8;
+
+  color: var(--muted);
+}
+
+.calendar {
+  padding: 28px;
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius: 28px;
+
+  background: white;
+
+  box-shadow:
+    0 30px 80px
+    rgba(
+      21,
+      23,
+      19,
+      0.08
+    );
+}
+
+.calendarHeader {
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  padding-bottom: 24px;
+}
+
+.calendarHeader strong {
+  font-size: 28px;
+}
+
+.calendarHeader span {
+  font-size: 10px;
+
+  letter-spacing: 0.12em;
+
+  color: var(--muted);
+}
+
+.weekdays,
+.calendarGrid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(7, 1fr);
+}
+
+.weekdays span {
+  padding: 12px 6px;
+
+  text-align: center;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  color: var(--muted);
+}
+
+.calendarDay {
+  min-height: 78px;
+
+  padding: 10px;
+
+  border-top:
+    1px solid
+    var(--line);
+
+  border-right:
+    1px solid
+    var(--line);
+}
+
+.calendarDay:nth-child(7n) {
+  border-right: 0;
+}
+
+.calendarDay span {
+  font-size: 10px;
+
+  color: var(--muted);
+}
+
+.calendarDay b {
+  margin-top: 12px;
+
+  width: 28px;
+  height: 28px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: var(--lime);
+
+  font-size: 13px;
+}
+
+.calendarDay small {
+  display: block;
+
+  margin-top: 18px;
+
+  font-size: 7px;
+
+  font-weight: 900;
+
+  letter-spacing: 0.08em;
+}
+
+.completeBadge {
+  width: max-content;
+
+  max-width: 100%;
+
+  margin: 26px auto 0;
+
+  padding: 12px 16px;
+
+  border-radius: 999px;
+
+  background: #151713;
+
+  color: white;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 0.09em;
+}
+
+/* ========================
+   DAY 365
+======================== */
+
+.dayJourney {
+  height: 520vh;
+
+  background: var(--lime);
+}
+
+.daySticky {
+  position: sticky;
+
+  top: 0;
+
+  min-height: 100svh;
+
+  padding: 72px 24px;
+
+  display: grid;
+
+  place-content: center;
+
+  justify-items: center;
+
+  text-align: center;
+}
+
+.dayCounter span {
+  display: block;
+
+  margin-bottom: -20px;
+
+  font-size:
+    clamp(
+      28px,
+      4vw,
+      54px
+    );
+
+  font-weight: 900;
+
+  letter-spacing: 0.14em;
+}
+
+.dayCounter strong {
+  display: block;
+
+  font-size:
+    clamp(
+      180px,
+      32vw,
+      520px
+    );
+
+  line-height: 0.78;
+
+  letter-spacing: -0.09em;
+
+  animation:
+    numberIn
+    0.35s
+    both;
+}
+
+.dayTimeline {
+  display: flex;
+
+  gap: 8px;
+
+  margin-top: 44px;
+}
+
+.dayTimeline span {
+  min-width: 52px;
+
+  padding: 9px 12px;
+
+  border:
+    1px solid
+    rgba(0, 0, 0, 0.15);
+
+  border-radius: 999px;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  opacity: 0.3;
+}
+
+.dayTimeline
+  .dayActive {
+  background: #151713;
+
+  color: white;
+
+  opacity: 1;
+}
+
+.dayFinal {
+  margin-top: 44px;
+
+  animation:
+    revealUp
+    0.65s
+    both;
+}
+
+.dayFinal p {
+  margin: 0 0 12px;
+
+  font-size: 18px;
+}
+
+.dayFinal h2 {
+  margin: 0;
+
+  font-size:
+    clamp(
+      35px,
+      5vw,
+      64px
+    );
+
+  line-height: 1.04;
+
+  letter-spacing: -0.05em;
+}
+
+/* ========================
+   BENEFITS
+======================== */
+
+.benefits {
+  padding: 140px 24px;
+
+  background: #151713;
+
+  color: white;
+}
+
+.benefitIntro,
+.benefitGrid {
+  width: min(1180px, 100%);
+
+  margin-inline: auto;
+}
+
+.benefitIntro h2 {
+  margin: 0;
+
+  font-size:
+    clamp(
+      50px,
+      7vw,
+      92px
+    );
+
+  letter-spacing: -0.06em;
+}
+
+.benefitGrid {
+  margin-top: 70px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+}
+
+.benefitGrid article {
+  min-height: 260px;
+
+  padding: 28px;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.12
+    );
+}
+
+.benefitGrid
+  article + article {
+  border-left: 0;
+}
+
+.benefitGrid span {
+  color: var(--lime);
+
+  font-size: 11px;
+
+  font-weight: 900;
+}
+
+.benefitGrid h3 {
+  margin:
+    110px 0 10px;
+
+  font-size: 25px;
+}
+
+.benefitGrid p {
+  margin: 0;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.5
+    );
+
+  line-height: 1.6;
+}
+
+/* ========================
+   CTA
+======================== */
+
+.cta {
+  min-height: 100svh;
+
+  padding: 130px 24px;
+
+  display: grid;
+
+  place-content: center;
+
+  justify-items: center;
+
+  text-align: center;
+}
+
+.cta h2 {
+  margin: 0;
+
+  font-size:
+    clamp(
+      80px,
+      13vw,
+      190px
+    );
+
+  line-height: 0.86;
+
+  letter-spacing: -0.08em;
+}
+
+.cta
+  > p:not(.eyebrow) {
+  margin: 34px 0 50px;
+
+  font-size: 19px;
+
+  line-height: 1.7;
+
+  color: var(--muted);
+}
+
+.productCard {
+  width: min(680px, 100%);
+
+  padding: 32px;
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius: 26px;
+
+  background: white;
+
+  text-align: left;
+}
+
+.productCard span {
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 0.12em;
+
+  color: var(--muted);
+}
+
+.productCard strong {
+  display: block;
+
+  margin: 12px 0 28px;
+
+  font-size:
+    clamp(
+      24px,
+      4vw,
+      38px
+    );
+
+  letter-spacing: -0.04em;
+}
+
+.productCard button {
+  width: 100%;
+
+  padding: 18px 22px;
+
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  border: 0;
+
+  border-radius: 14px;
+
+  background: #151713;
+
+  color: white;
+
+  cursor: pointer;
+
+  font-weight: 900;
+}
+
+.productCard i {
+  font-style: normal;
+
+  transition:
+    transform 0.25s ease;
+}
+
+.productCard
+  button:hover i {
+  transform:
+    translateX(8px);
+}
+
+/* ========================
+   KEYFRAMES
+======================== */
+
+@keyframes revealUp {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(28px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+@keyframes notificationIn {
+  from {
+    opacity: 0;
+
+    transform:
+      translate(
+        -20px,
+        12px
+      )
+      scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translate(0, 0)
+      scale(1);
+  }
+}
+
+@keyframes breathe {
+  to {
+    transform:
+      scale(1.14);
+
+    opacity: 0.72;
+  }
+}
+
+@keyframes numberIn {
+  from {
+    opacity: 0.35;
+
+    transform:
+      translateY(30px)
+      scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+/* ========================
+   TABLET
+======================== */
+
+@media (max-width: 900px) {
+  .notification {
+    top: 12%;
+    left: 56%;
+
+    width: 220px;
+  }
+
+  .experience {
+    height: 520vh;
+  }
+
+  .experienceSticky {
+    padding:
+      28px 20px
+      36px;
+  }
+
+  .experienceGrid {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+
+    align-content: center;
+  }
+
+  .phone {
+    width: 240px;
+    height: 490px;
+
+    border-radius: 36px;
+  }
+
+  .chatBody,
+  .experiencePhoneBody {
+    min-height: 340px;
+  }
+
+  .phoneExperienceLayer {
+    top: 62px;
+  }
+
+  .progressTrack {
+    width: 240px;
+  }
+
+  .stepColumn {
+    min-height: 280px;
+  }
+
+  .stepColumn
+    .sectionNumber {
+    display: none;
+  }
+
+  .experienceTextStage {
+    height: 190px;
+
+    text-align: center;
+  }
+
+  .experienceTextLayer {
+    left: 50%;
+
+    width:
+      min(
+        560px,
+        100%
+      );
+
+    margin-left: -50%;
+  }
+
+  .experienceTextLayer h2 {
+    font-size: 44px;
+  }
+
+  .experienceTextLayer p {
+    margin-inline: auto;
+
+    font-size: 14px;
+  }
+
+  .systemHeader {
+    display: block;
+  }
+
+  .systemGrid,
+  .benefitGrid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .systemCard h3 {
+    margin-top: 90px;
+  }
+
+  .routine {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+}
+
+/* ========================
+   MOBILE
+======================== */
+
+@media (max-width: 620px) {
+  .hero {
+    padding-inline: 18px;
+  }
+
+  .hero h1 {
+    font-size:
+      clamp(
+        44px,
+        15vw,
+        68px
+      );
+  }
+
+  .notification {
+    top: 15%;
+    left: 50%;
+
+    width: 210px;
+  }
+
+  .problem {
+    padding-inline: 18px;
+  }
+
+  .problemCards {
+    height: 330px;
+  }
+
+  .problemCard {
+    width: 220px;
+  }
+
+  .experience {
+    height: 540vh;
+  }
+
+  .experienceSticky {
+    align-items: start;
+  }
+
+  .experienceGrid {
+    padding-top: 6px;
+  }
+
+  .stepColumn {
+    min-height: 240px;
+  }
+
+  .experienceTextStage {
+    height: 150px;
+  }
+
+  .experienceTextLayer h2 {
+    font-size: 36px;
+  }
+
+  .experienceTextLayer p {
+    font-size: 13px;
+  }
+
+  .stepNav p {
+    font-size: 8px;
+  }
+
+  .systemGrid,
+  .benefitGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefitGrid
+    article + article {
+    border-left:
+      1px solid
+      rgba(
+        255,
+        255,
+        255,
+        0.12
+      );
+
+    border-top: 0;
+  }
+
+  .routine {
+    width:
+      min(
+        100% - 32px,
+        1180px
+      );
+  }
+
+  .calendar {
+    padding: 16px;
+  }
+
+  .calendarDay {
+    min-height: 58px;
+
+    padding: 6px;
+  }
+
+  .calendarDay b {
+    width: 22px;
+    height: 22px;
+
+    margin-top: 8px;
+  }
+
+  .calendarDay small {
+    font-size: 5px;
+  }
+
+  .dayTimeline {
+    flex-wrap: wrap;
+
+    justify-content: center;
+  }
+
+  .productCard {
+    padding: 22px;
+  }
+}
