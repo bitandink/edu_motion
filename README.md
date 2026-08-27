@@ -39,6 +39,3 @@ npm run dev
 
 `app/page.module.css`
 - 전체 비주얼 / 모션 / 반응형
-
-실제 지원 샘플에서는 Steady365의 허가된 이미지, 상품 캡처, 로고 자산으로
-현재 CSS mockup을 교체하면 됩니다.
